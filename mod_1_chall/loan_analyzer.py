@@ -115,7 +115,13 @@ new_loan = {
 # @TODO: Define a new function that will be used to calculate present value.
 #    This function should include parameters for `future_value`, `remaining_months`, and the `annual_discount_rate`
 #    The function should return the `present_value` for the loan.
-# YOUR CODE HERE!
+def get_present_value(future_value, remaining_months, annual_discount_rate):
+    new_present_value = future_value / (1 + annual_discount_rate) ** remaining_months
+    print(f"The new present value is ${new_present_value: .2f}")
+    return new_present_value
+
+new_present_value = get_present_value(1000, 12, .2)
+   
 
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
